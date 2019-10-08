@@ -1,3 +1,8 @@
+const Airtable = require("airtable");
+const Base = new Airtable({ apiKey: "keygnXHHKdXsI39wk" }).base(
+  "apppdEXyxiUokMWRL"
+);
+
 class Model {
   constructor() {
     this.calculations = [];
@@ -10,6 +15,21 @@ class Model {
 
   _commit(calculations) {
     this.onCalculationChange(calculations);
+    this.save(calculations);
+    this.calculations = [];
+  }
+
+  save(calculations) {
+    calculations.forEach(calculation => {
+      Base("Payments").create([
+        {
+          fields: {
+            Amount: calculation.amount,
+            Date: calculation.date
+          }
+        }
+      ]);
+    });
   }
 
   calculate(hours, minutes, rate) {

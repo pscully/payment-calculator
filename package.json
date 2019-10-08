@@ -1,0 +1,22 @@
+{
+  "name": "payment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pscully/payment-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pscully/payment-calculator/issues"
+  },
+  "homepage": "https://github.com/pscully/payment-calculator#readme",
+  "dependencies": {
+    "airtable": "^0.7.1"
+  }
+}
