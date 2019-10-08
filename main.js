@@ -1,7 +1,5 @@
 const Airtable = require("airtable");
-const Base = new Airtable({ apiKey: "keygnXHHKdXsI39wk" }).base(
-  "apppdEXyxiUokMWRL"
-);
+const Base = new Airtable({ apiKey: API_KEY }).base("apppdEXyxiUokMWRL");
 
 class Model {
   constructor() {
